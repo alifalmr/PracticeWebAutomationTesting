@@ -1,0 +1,586 @@
+[
+  {
+    "line": 2,
+    "elements": [
+      {
+        "before": [
+          {
+            "result": {
+              "duration": 33282878900,
+              "status": "passed"
+            },
+            "match": {
+              "location": "Hooks.openBrowser()"
+            }
+          }
+        ],
+        "line": 5,
+        "name": "User log in with valid email and password",
+        "description": "",
+        "id": "testing-log-in-page-as-a-user;user-log-in-with-valid-email-and-password",
+        "after": [
+          {
+            "result": {
+              "duration": 3134902299,
+              "status": "passed"
+            },
+            "match": {
+              "location": "Hooks.closeBrowser()"
+            }
+          }
+        ],
+        "type": "scenario",
+        "keyword": "Scenario",
+        "steps": [
+          {
+            "result": {
+              "duration": 13272511099,
+              "status": "passed"
+            },
+            "line": 6,
+            "name": "User navigates to the log in page",
+            "match": {
+              "location": "LogInWithEmailStepDef.verifyPage()"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 7980376200,
+              "status": "passed"
+            },
+            "line": 7,
+            "name": "User log in with \"almiraalifa@gmail.com\" as an email and \"coBac0ba\" as a password",
+            "match": {
+              "arguments": [
+                {
+                  "val": "almiraalifa@gmail.com",
+                  "offset": 18
+                },
+                {
+                  "val": "coBac0ba",
+                  "offset": 58
+                }
+              ],
+              "location": "LogInWithEmailStepDef.inputCredential(String,String)"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 17855199000,
+              "status": "passed"
+            },
+            "line": 8,
+            "name": "User should be directed to home page",
+            "match": {
+              "location": "LogInWithEmailStepDef.verifyProfilePage()"
+            },
+            "keyword": "Then "
+          }
+        ],
+        "tags": [
+          {
+            "line": 4,
+            "name": "@Positive"
+          }
+        ]
+      },
+      {
+        "before": [
+          {
+            "result": {
+              "duration": 27029464199,
+              "status": "passed"
+            },
+            "match": {
+              "location": "Hooks.openBrowser()"
+            }
+          }
+        ],
+        "line": 17,
+        "name": "User log in with invalid credentials",
+        "description": "",
+        "id": "testing-log-in-page-as-a-user;user-log-in-with-invalid-credentials;;2",
+        "after": [
+          {
+            "result": {
+              "duration": 1681682999,
+              "status": "passed"
+            },
+            "match": {
+              "location": "Hooks.closeBrowser()"
+            }
+          }
+        ],
+        "type": "scenario",
+        "keyword": "Scenario Outline",
+        "steps": [
+          {
+            "result": {
+              "duration": 4728671700,
+              "status": "passed"
+            },
+            "line": 12,
+            "name": "User navigates to the log in page",
+            "match": {
+              "location": "LogInWithEmailStepDef.verifyPage()"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 1735032000,
+              "status": "passed"
+            },
+            "line": 13,
+            "name": "User log in with \"aaa@gmail.com\" as an email and \"hjel34\" as a password",
+            "match": {
+              "arguments": [
+                {
+                  "val": "aaa@gmail.com",
+                  "offset": 18
+                },
+                {
+                  "val": "hjel34",
+                  "offset": 50
+                }
+              ],
+              "location": "LogInWithEmailStepDef.inputCredential(String,String)"
+            },
+            "matchedColumns": [
+              0,
+              1
+            ],
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 498007200,
+              "status": "passed"
+            },
+            "line": 14,
+            "name": "User should get an error message",
+            "match": {
+              "location": "LogInWithEmailStepDef.verifyLogInErrorMessage()"
+            },
+            "keyword": "Then "
+          }
+        ],
+        "tags": [
+          {
+            "line": 10,
+            "name": "@Negative"
+          },
+          {
+            "line": 1,
+            "name": "@Test"
+          }
+        ]
+      },
+      {
+        "before": [
+          {
+            "result": {
+              "duration": 24964985200,
+              "status": "passed"
+            },
+            "match": {
+              "location": "Hooks.openBrowser()"
+            }
+          }
+        ],
+        "line": 18,
+        "name": "User log in with invalid credentials",
+        "description": "",
+        "id": "testing-log-in-page-as-a-user;user-log-in-with-invalid-credentials;;3",
+        "after": [
+          {
+            "result": {
+              "duration": 1468785200,
+              "status": "passed"
+            },
+            "match": {
+              "location": "Hooks.closeBrowser()"
+            }
+          }
+        ],
+        "type": "scenario",
+        "keyword": "Scenario Outline",
+        "steps": [
+          {
+            "result": {
+              "duration": 4210901100,
+              "status": "passed"
+            },
+            "line": 12,
+            "name": "User navigates to the log in page",
+            "match": {
+              "location": "LogInWithEmailStepDef.verifyPage()"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 2470273201,
+              "status": "passed"
+            },
+            "line": 13,
+            "name": "User log in with \"iwiwi@hhh.com\" as an email and \"22222\" as a password",
+            "match": {
+              "arguments": [
+                {
+                  "val": "iwiwi@hhh.com",
+                  "offset": 18
+                },
+                {
+                  "val": "22222",
+                  "offset": 50
+                }
+              ],
+              "location": "LogInWithEmailStepDef.inputCredential(String,String)"
+            },
+            "matchedColumns": [
+              0,
+              1
+            ],
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 181948000,
+              "status": "passed"
+            },
+            "line": 14,
+            "name": "User should get an error message",
+            "match": {
+              "location": "LogInWithEmailStepDef.verifyLogInErrorMessage()"
+            },
+            "keyword": "Then "
+          }
+        ],
+        "tags": [
+          {
+            "line": 10,
+            "name": "@Negative"
+          },
+          {
+            "line": 1,
+            "name": "@Test"
+          }
+        ]
+      },
+      {
+        "before": [
+          {
+            "result": {
+              "duration": 22028103000,
+              "status": "passed"
+            },
+            "match": {
+              "location": "Hooks.openBrowser()"
+            }
+          }
+        ],
+        "line": 21,
+        "name": "User activates view password",
+        "description": "",
+        "id": "testing-log-in-page-as-a-user;user-activates-view-password",
+        "after": [
+          {
+            "result": {
+              "duration": 1427107001,
+              "status": "passed"
+            },
+            "match": {
+              "location": "Hooks.closeBrowser()"
+            }
+          }
+        ],
+        "type": "scenario",
+        "keyword": "Scenario",
+        "steps": [
+          {
+            "result": {
+              "duration": 5175986100,
+              "status": "passed"
+            },
+            "line": 22,
+            "name": "User navigates to the log in page",
+            "match": {
+              "location": "LogInWithEmailStepDef.verifyPage()"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 317380399,
+              "status": "passed"
+            },
+            "line": 23,
+            "name": "User clicks view password button",
+            "match": {
+              "location": "LogInWithEmailStepDef.clickViewButton()"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 94050900,
+              "status": "passed"
+            },
+            "line": 24,
+            "name": "User should see the password",
+            "match": {
+              "location": "LogInWithEmailStepDef.verifyViewPassword()"
+            },
+            "keyword": "Then "
+          }
+        ],
+        "tags": [
+          {
+            "line": 20,
+            "name": "@Positive"
+          }
+        ]
+      },
+      {
+        "before": [
+          {
+            "result": {
+              "duration": 25150829500,
+              "status": "passed"
+            },
+            "match": {
+              "location": "Hooks.openBrowser()"
+            }
+          }
+        ],
+        "line": 27,
+        "name": "User signs up a new account",
+        "description": "",
+        "id": "testing-log-in-page-as-a-user;user-signs-up-a-new-account",
+        "after": [
+          {
+            "result": {
+              "duration": 1492788001,
+              "status": "passed"
+            },
+            "match": {
+              "location": "Hooks.closeBrowser()"
+            }
+          }
+        ],
+        "type": "scenario",
+        "keyword": "Scenario",
+        "steps": [
+          {
+            "result": {
+              "duration": 5072913900,
+              "status": "passed"
+            },
+            "line": 28,
+            "name": "User navigates to the log in page",
+            "match": {
+              "location": "LogInWithEmailStepDef.verifyPage()"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 2690427900,
+              "status": "passed"
+            },
+            "line": 29,
+            "name": "User clicks sign up button",
+            "match": {
+              "location": "LogInWithEmailStepDef.clickSignUpButton()"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 56181100,
+              "status": "passed"
+            },
+            "line": 30,
+            "name": "User should be directed to the sign up page",
+            "match": {
+              "location": "LogInWithEmailStepDef.verifySignUpPage()"
+            },
+            "keyword": "Then "
+          }
+        ],
+        "tags": [
+          {
+            "line": 26,
+            "name": "@Positive1"
+          },
+          {
+            "line": 26,
+            "name": "@Positive"
+          }
+        ]
+      },
+      {
+        "before": [
+          {
+            "result": {
+              "duration": 24918477501,
+              "status": "passed"
+            },
+            "match": {
+              "location": "Hooks.openBrowser()"
+            }
+          }
+        ],
+        "line": 33,
+        "name": "User goes to forgot password page",
+        "description": "",
+        "id": "testing-log-in-page-as-a-user;user-goes-to-forgot-password-page",
+        "after": [
+          {
+            "result": {
+              "duration": 1470635199,
+              "status": "passed"
+            },
+            "match": {
+              "location": "Hooks.closeBrowser()"
+            }
+          }
+        ],
+        "type": "scenario",
+        "keyword": "Scenario",
+        "steps": [
+          {
+            "result": {
+              "duration": 4685479700,
+              "status": "passed"
+            },
+            "line": 34,
+            "name": "User navigates to the log in page",
+            "match": {
+              "location": "LogInWithEmailStepDef.verifyPage()"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 1761176300,
+              "status": "passed"
+            },
+            "line": 35,
+            "name": "User clicks lupa password button",
+            "match": {
+              "location": "LogInWithEmailStepDef.clickForgotPassword()"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 77789600,
+              "status": "passed"
+            },
+            "line": 36,
+            "name": "User should be directed to forgot password page",
+            "match": {
+              "location": "LogInWithEmailStepDef.verifyForgotPassPage()"
+            },
+            "keyword": "Then "
+          }
+        ],
+        "tags": [
+          {
+            "line": 32,
+            "name": "@Positive"
+          }
+        ]
+      },
+      {
+        "before": [
+          {
+            "result": {
+              "duration": 27723501299,
+              "status": "passed"
+            },
+            "match": {
+              "location": "Hooks.openBrowser()"
+            }
+          }
+        ],
+        "line": 39,
+        "name": "User goes back to the home page",
+        "description": "",
+        "id": "testing-log-in-page-as-a-user;user-goes-back-to-the-home-page",
+        "after": [
+          {
+            "result": {
+              "duration": 3758551000,
+              "status": "passed"
+            },
+            "match": {
+              "location": "Hooks.closeBrowser()"
+            }
+          }
+        ],
+        "type": "scenario",
+        "keyword": "Scenario",
+        "steps": [
+          {
+            "result": {
+              "duration": 8422252000,
+              "status": "passed"
+            },
+            "line": 40,
+            "name": "User navigates to the log in page",
+            "match": {
+              "location": "LogInWithEmailStepDef.verifyPage()"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 38397487500,
+              "status": "passed"
+            },
+            "line": 41,
+            "name": "User clicks go back button",
+            "match": {
+              "location": "LogInWithEmailStepDef.goBackButton()"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 10442121000,
+              "status": "passed"
+            },
+            "line": 42,
+            "name": "User should be directed to home page",
+            "match": {
+              "location": "LogInWithEmailStepDef.verifyProfilePage()"
+            },
+            "keyword": "Then "
+          }
+        ],
+        "tags": [
+          {
+            "line": 38,
+            "name": "@Positive"
+          }
+        ]
+      }
+    ],
+    "name": "Testing Log In Page as a User",
+    "description": "",
+    "id": "testing-log-in-page-as-a-user",
+    "keyword": "Feature",
+    "uri": "features/login.feature",
+    "tags": [
+      {
+        "line": 1,
+        "name": "@Test"
+      }
+    ]
+  }
+]
