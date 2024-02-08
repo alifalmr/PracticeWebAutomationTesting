@@ -1,5 +1,7 @@
 package starter.kompascom;
 
+import org.junit.Assert;
+import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
@@ -106,6 +108,33 @@ public class LogInPage {
     private WebElement homePageTitle;
     public String getHomeTitle(){
         return homePageTitle.getText();
+    }
+
+    @FindBy(xpath = "//input[@id='search']")
+    private WebElement searchField;
+    public void inputKeyword (String keyword) {
+        searchField.sendKeys(keyword);
+    }
+    public void typeEnter() {
+        searchField.sendKeys(Keys.ENTER);
+    }
+
+    @FindBy(xpath = "//div[@class='gsc-webResult gsc-result'][2]//div[@class='gsc-thumbnail-inside']//a[contains(@class,'title')]")
+    private WebElement secondSearchResult;
+    public void clickSecondResult() {
+        secondSearchResult.click();
+    }
+
+    @FindBy(xpath = "//div[@class='title__content']")
+    private WebElement searchPageTitle;
+    public boolean getSearchPageTitle() {
+        return searchPageTitle.getText().contains("PENCARIAN");
+    }
+
+    @FindBy(xpath = "//h1[@class='read__title']")
+    private WebElement articleTitle;
+    public boolean checkArticleTitle() {
+        return articleTitle.isDisplayed();
     }
 
 }

@@ -8,6 +8,9 @@ import org.openqa.selenium.WebDriver;
 import starter.Hooks;
 import starter.kompascom.LogInPage;
 
+import java.awt.*;
+import java.awt.event.KeyEvent;
+
 public class LogInWithEmailStepDef {
     private WebDriver webDriver;
     public LogInWithEmailStepDef(){
@@ -58,6 +61,19 @@ public class LogInWithEmailStepDef {
         logInPage.clickGoBackButton();
     }
 
+    @When("User input \"(.*)\" as a keyword submit it to search")
+    public void searchKeyword(String keyword) throws AWTException {
+        LogInPage logInPage = new LogInPage(webDriver);
+        logInPage.inputKeyword(keyword);
+        logInPage.typeEnter();
+    }
+
+    @When("User go to the second search result")
+    public void goSecondResult() {
+        LogInPage logInPage = new LogInPage(webDriver);
+        logInPage.clickSecondResult();
+    }
+
     @Then("User should be directed to home page")
     public void verifyProfilePage() throws InterruptedException {
         Thread.sleep(10000);
@@ -78,7 +94,7 @@ public class LogInWithEmailStepDef {
     }
 
     @Then("User should be directed to the sign up page")
-    public void verifySignUpPage() throws InterruptedException {
+    public void verifySignUpPage() {
         LogInPage logInPage = new LogInPage(webDriver);
         Assert.assertEquals("Daftar KG Media ID", logInPage.getTitleSignUpPage());
     }
@@ -88,4 +104,17 @@ public class LogInWithEmailStepDef {
         LogInPage logInPage = new LogInPage(webDriver);
         Assert.assertEquals("Lupa Password",logInPage.getForgotPassTitlePage());
     }
+
+    @Then("User should be directed to search result")
+    public void verifySearchPage() {
+        LogInPage logInPage = new LogInPage(webDriver);
+        Assert.assertTrue(logInPage.getSearchPageTitle());
+    }
+
+    @Then("User should be on the news page")
+    public void verifyNewsPage() {
+        LogInPage logInPage = new LogInPage(webDriver);
+        Assert.assertTrue(logInPage.checkArticleTitle());
+    }
+
 }

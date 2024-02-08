@@ -1,6 +1,21 @@
 @Test
 Feature: Testing Log In Page as a User
 
+  @MainTest @Positive
+  Scenario Outline: User log in with valid email and password
+    Given User navigates to the log in page
+    When User log in with "almiraalifa@gmail.com" as an email and "coBac0ba" as a password
+    And User should be directed to home page
+    And User input "<keyword>" as a keyword submit it to search
+    And User should be directed to search result
+    And User go to the second search result
+    Then User should be on the news page
+  Examples:
+    | keyword |
+    |pilpres|
+    |bogor  |
+
+
   @Positive
   Scenario: User log in with valid email and password
     Given User navigates to the log in page
